@@ -2,35 +2,16 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Aprendiendo HTML - Clase 03</title>
-
-		<!-- Recurso (hipervínculo de referencia)(relación entre el hiper y el html) -->
+		<title>DX - DeporteXtremo</title>
 		<link href="css/style.css" rel="stylesheet">
-
-		<!-- Otra forma de asignar estilo sin salir del html. Sirve para armar prototipos antes de pasarlo al css -->
-		<style>
-			h1 {
-				font-size: 6em;
-				color: #a4a4a4 !important; /* El important sirve para fijar un atributo */
-			}
-		</style>
 	</head>
 	<body>
-		<h1>Aprendiendo GIT</h1>
-		<p>GIT es un soft de versiones diseñado por Linus Torvalds.</p>
 
-		<!-- Lo último que tiene que cargar la página es el JS (primero los externos y luego los internos. No a la vez) -->
-		
-		<!-- ejemplo externo (widgets, apis, imágenes, mis js) --> 
-		<script src="js/main.js"></script>
+		<!-- ENCABEZADO -->
+		<header>
+			<h1>DeporteXtremo</h1>
+			
+		</header>
 
-		<!-- ejemplo interno --> 
-		<script>
-			function saludar(){
-			window.alert("Hola desde un bloque script")
-			}
-
-			document.querySelector("p").onclick = saludar;		
-		</script>
 	</body>
 </html>
