@@ -6,6 +6,21 @@ body {
 }
 
 h1 {
-	font-size: 24px;
+	font-size: 22px;
 	margin: 0px;
+}
+
+/* Reglas para hipervínculos*/
+a {
+	text-decoration: none; /* Desactivo las reglas nativas del navegador */
+	color: #CCCCCC;
+}
+
+/* Creamos una pseudoclase para cuando el usuario interactua */
+a:hover {
+	color: #FFFFFF;
+}
+
+header {
+	background-color: #212121;
 }
