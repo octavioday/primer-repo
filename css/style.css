@@ -24,3 +24,30 @@ a:hover {
 header {
 	background-color: #212121;
 }
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	color: white;
+
+	overflow: hidden;    /* - El navegador recupera la capacidad de saber cuanto mide de alto cada li y lo agrega al header 
+							- Se usa el hidden y no el auto porque no funciona bien en explorer */
+
+}
+
+li{
+	/*
+	display: block; elementos uno debajo de otro (soporta margin y padding)
+	display: inline; elementos uno al lado del otro (no soporta margin top ni bot)
+	display: inline-block; elementos uno al lado de otro (soporta margin y padding)
+	display: none; oculta el elemento completamente de la interfaz hasta que pasa algo (un desplegable) 
+	*/
+
+	width: 100px; /* O el porcentaje del contenedor padre que quiero que ocupen los elementos */
+
+	float: left; /* - Para que cada elemento se pegue a la izquierda de su elemento superior (right los mezcla por algún motivo) 
+					- Cuando se aplica, el elemento contenedor pierde la capacidad de saber cuánto mide el elemento (sale del header)
+					- Se debe agregar la propiedad overflow al ul */
+
+}
