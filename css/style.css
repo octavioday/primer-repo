@@ -21,33 +21,59 @@ a:hover {
 	color: #FFFFFF;
 }
 
-header {
+#top {
 	background-color: #212121;
+	padding: 10px;
+	display: flex; /* 3° forma de organizar el menu */
+	flex-direction: row; /* los organiza en forma de fila */
+	align-items: center; /* Eje X */
+	justify-content: flex-start; /* Eje Y */
 }
 
-ul {
+#menu {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	color: white;
 
-	overflow: hidden;    /* - El navegador recupera la capacidad de saber cuanto mide de alto cada li y lo agrega al header 
+	overflow: hidden;     /* - El navegador recupera la capacidad de saber cuanto mide de alto cada li y lo agrega al header 
 							- Se usa el hidden y no el auto porque no funciona bien en explorer */
 
+	margin: 0 0 0 auto;   /* Si quiero que un elemento no siga el flex, le defino el margin. Arriba derecha abajo izquierda */
+
+	text-align: center;	  /* Para que los botones queden bien centrados */
 }
 
-li{
-	/*
+#menu li{
+	/* 1° forma de organizar el menu
 	display: block; elementos uno debajo de otro (soporta margin y padding)
 	display: inline; elementos uno al lado del otro (no soporta margin top ni bot)
 	display: inline-block; elementos uno al lado de otro (soporta margin y padding)
 	display: none; oculta el elemento completamente de la interfaz hasta que pasa algo (un desplegable) 
 	*/
 
-	width: 100px; /* O el porcentaje del contenedor padre que quiero que ocupen los elementos */
-
+	/* 2° forma de organizar el menu */
 	float: left; /* - Para que cada elemento se pegue a la izquierda de su elemento superior (right los mezcla por algún motivo) 
 					- Cuando se aplica, el elemento contenedor pierde la capacidad de saber cuánto mide el elemento (sale del header)
 					- Se debe agregar la propiedad overflow al ul */
 
+
+	/* 3° forma de organizar el menu. ver #menu */
+
+
+	/* 
+	width: 100px; /* O el porcentaje del contenedor padre que quiero que ocupen los elementos 
+	*/
+}
+
+#menu li a {
+	display: block;	/* Amplio el margen interno para que sea más facil clickearlo */
+	padding: 10px; /* Necesitamos al menos 30 px para que el usuario pueda clickearlo con el dedo */
+	font-size:	24px; 
+	color: #D9D9D9;
+}
+
+#menu li a:hover {
+	color: #FFFFFF;
+	background-color: #AAAAAA;
 }
