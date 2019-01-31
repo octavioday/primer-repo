@@ -77,3 +77,16 @@ a:hover {
 	color: #FFFFFF;
 	background-color: #AAAAAA;
 }
+
+#content figure {
+	margin: 0;
+}
+
+#content figure figcaption {
+	background-color: #212121;
+	padding: 10px;
+}
+
+#content figure figcaption h2 {
+	
+}
