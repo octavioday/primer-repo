@@ -30,13 +30,30 @@
 		<main id="content"> <!-- La etiqueta main no se puede repetir en todo el html -->
 
 			<!-- NOTICIA DESTACADA -->
-			<figure>
-				<img src="img/juegos-olimpicos.jpg" alt="Juegos Olímpicos">
-				<figcaption>
-					<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</h2>
-				</figcaption>
-			</figure>
+			<section id="noticiasDestacadas">
+				<figure>
+					<a href="#">
+						<img src="img/juegos-olimpicos.jpg" alt="JJOO"> <!-- si agrego ../ en src me voy dos carpetas fuera del index -->
+						<figcaption>
+							<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</h2>
+						</figcaption>
+					</a>
+				</figure>
+			</section>
+
+			<!-- ULTIMAS NOTICIAS-->
+			<section id="ultimasNoticias"> <!-- los id no se repiten (DNI) -->
+				<article class="noticia"> <!-- Las clases se pueden repetir (Argenitno) y las puedo apilar simplemente espaciandolas -->
+					<img src="img/sorteo-libertadores.jpg" class="noticia-img">
+					<div class="noticia-txt">
+						<h3>Libertadores</h3>
+						<small>Autor</small>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>					
+				</article>
+
+			</section>
+
 		</main>
 
 		<!-- PIE DE PAGINA -->

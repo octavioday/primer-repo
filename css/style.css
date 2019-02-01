@@ -28,6 +28,7 @@ a:hover {
 	flex-direction: row; /* los organiza en forma de fila */
 	align-items: center; /* Eje X */
 	justify-content: flex-start; /* Eje Y */
+	border-bottom: solid 1px white/* tipo de borde - grosor - color */
 }
 
 #menu {
@@ -88,5 +89,20 @@ a:hover {
 }
 
 #content figure figcaption h2 {
-	
+	color: #FFFFFF;
+	margin: 0;
+	font-size: 36px;
+}
+
+#content img {
+	display: block; /* transformo la imagen en un elemento de bloque para que cubra toda el area */
+	width: 100%; /* siempre usan como escala al contenedor (en este caso el figure) */
+}
+
+.noticia {
+	border-bottom: solid 1px #CCC;
+}
+
+.noticia-img {
+
 }
