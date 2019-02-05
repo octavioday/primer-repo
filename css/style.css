@@ -21,8 +21,14 @@ a:hover {
 	color: #FFFFFF;
 }
 
-#top {
+#top, 
+#content figcaption, 
+#copyright {
 	background-color: #212121;
+}
+
+
+#top {
 	padding: 10px;
 	display: flex; /* 3° forma de organizar el menu */
 	flex-direction: row; /* los organiza en forma de fila */
@@ -84,7 +90,6 @@ a:hover {
 }
 
 #content figure figcaption {
-	background-color: #212121;
 	padding: 10px;
 }
 
@@ -100,9 +105,40 @@ a:hover {
 }
 
 .noticia {
-	border-bottom: solid 1px #CCC;
+	border-bottom: solid 1px #CCC; /* Padding y marging engodarn el elemento. el border le come pixeles al elemento */
+	display: flex;
+	margin: 0 10px; /* si pongo 2 valores, estoy hablando del eje Y y el eje X (se repite arriba/abajo y der/izq) */
+	padding: 10px 0; /* Merging empuja del borde para afuera. El padding para adentro (comprime) */
 }
 
-.noticia-img {
+.noticia-img, 
+.noticia-txt {
+	padding: 0 10px;
+	box-sizing: border-box; /* esto me permite que elpadding comprima y no engorde al elemento */
+}
 
+/*
+Con esto le saco la negrita a todos los h
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+*/
+
+.noticia-img {
+	width: 30%;
+}
+
+.noticia-txt {
+	width: 70%;
+}
+
+#ultimasNoticias .noticia:last-child { /* aplica el estilo al ultimo elemento de la sección. Lo uso para sacarle el broder */
+	border: none;
+}
+
+#copyright {
+	margin: none;
+	padding: 10px;
+	color: #FFF;
+	text-align: center;
 }
