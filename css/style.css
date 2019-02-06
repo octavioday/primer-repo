@@ -142,3 +142,40 @@ h1,h2,h3,h4,h5,h6 {
 	color: #FFF;
 	text-align: center;
 }
+
+#tablaPosiciones table {
+	border-collapse: collapse;  /* anula el cellpadding y el cellspacing del navegador */
+	border: solid 1px #000000;
+	margin: auto;
+	width: 800px;
+}
+
+#tablaPosiciones table tr {
+	border: solid 1px #000000;
+
+}
+
+#tablaPosiciones table th {
+	background-color: red;
+	color: #FFF;
+}
+
+#tablaPosiciones table td {
+	background-color: #CCC;
+	padding: 10px;
+}
+
+#tablaPosiciones table td:nth-of-type(odd) { /* para impares */
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+
+}
+
+#tablaPosiciones table td:nth-of-type(even) span { /* para pares */
+	color: green;
+}
+
+#tablaPosiciones {
+	margin-bottom: 10px;
+}

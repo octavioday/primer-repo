@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<head>	
 		<meta charset="utf-8">
-		<title>DX - DeporteXtremo</title>
+		<title>DX - DeporteXtremo</title>	
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
-
 		<!-- ENCABEZADO -->
-		<header id="top">
+		<header id="top">	
+			
 			<!-- LOGO -->
 			<a href="https://www.mercadolibre.com/" target="_blank"> <img src="img/logo.png" width="50px"> </a> <!-- La etiqueta a es para crear un hipervínculo // Target es para que se abra en otra pestaña // El  height="" se calcula solo en relación al width // href indica a onde dirigirse y src trae cosas -->
 
@@ -29,8 +29,8 @@
 		<!-- CUERPO -->
 		<main id="content"> <!-- La etiqueta main no se puede repetir en todo el html -->
 
-			<!-- NOTICIA DESTACADA -->
-			<section id="noticiasDestacadas">
+			<!-- NOTICIAS DESTACADAS -->
+			<section id="noticiasDestacadas">		
 				<figure>
 					<a href="#">
 						<img src="img/juegos-olimpicos.jpg" alt="JJOO"> <!-- si agrego ../ en src me voy dos carpetas fuera del index -->
@@ -44,6 +44,7 @@
 			<!-- ULTIMAS NOTICIAS-->
 			<section id="ultimasNoticias"> <!-- los id no se repiten (DNI) -->
 
+				<!-- NOTICIA 1-->
 				<article class="noticia"> <!-- Las clases se pueden repetir (Argenitno) y las puedo apilar simplemente espaciandolas -->
 					<div class="noticia-img">
 					<img src="img/sorteo-libertadores.jpg">
@@ -55,9 +56,10 @@
 					</div>					
 				</article>
 
+				<!-- NOTICIA 2-->
 				<article class="noticia"> <!-- Las clases se pueden repetir (Argenitno) y las puedo apilar simplemente espaciandolas -->
 					<div class="noticia-img">
-					<img src="img/sorteo-libertadores.jpg">
+					<img src="img/tickets-rusia-mundial.jpg">
 					</div>
 					<div class="noticia-txt">
 						<h3>Libertadores</h3>
@@ -66,9 +68,10 @@
 					</div>					
 				</article>
 
+				<!-- NOTICIA 3-->
 				<article class="noticia"> <!-- Las clases se pueden repetir (Argenitno) y las puedo apilar simplemente espaciandolas -->
 					<div class="noticia-img">
-					<img src="img/sorteo-libertadores.jpg">
+					<img src="img/firpo.jpg">
 					</div>
 					<div class="noticia-txt">
 						<h3>Libertadores</h3>
@@ -77,9 +80,10 @@
 					</div>					
 				</article>
 
+				<!-- NOTICIA 4-->
 				<article class="noticia"> <!-- Las clases se pueden repetir (Argenitno) y las puedo apilar simplemente espaciandolas -->
 					<div class="noticia-img">
-					<img src="img/sorteo-libertadores.jpg">
+					<img src="img/buenos-aires.jpg">
 					</div>
 					<div class="noticia-txt">
 						<h3>Libertadores</h3>
@@ -87,17 +91,58 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>					
 				</article>
-
 			</section>
 
-			<!-- Agrego espacios, o filas en blando. O tmb para cortar un texto y que siga abajo -->
-			<br>
+			<br> <!-- Agrego espacios, o filas en blando. O tmb para cortar un texto y que siga abajo -->
 
+			<!-- TABLA DE POSICIONES -->
+			<section id="tablaPosiciones">
+
+				<table> <!-- atributos sin css width="800" border="1" cellpadding="10" cellspacing="0" align="center" -->
+
+					<!-- Fila 0 -->
+					<tr>
+						<th colspan="4">3era Fecha</th> <!-- colspan es para combinar celdas (defino cuantas hay que combinar) -->			
+					</tr>
+
+					<!-- Fila 1 -->
+					<tr>
+						<td>1</td> <!-- Celda 1 -->
+						<td><span>Tigre</span> 1pts<br>Patronato 3pts</td> <!-- Celda 2 / el span te permite personalizarla-->
+						<td>2</td> <!-- Celda 3 -->
+						<td>Colón 4pts<br>Estudiantes 3pts</td> <!-- Celda 4 -->
+					</tr>
+
+					<!-- Fila 2 -->
+					<tr>
+						<td>3</td> <!-- Celda 1 -->
+						<td>Defensa y Justicia 1pts<br>Union 4pts</td> <!-- Celda 2 -->
+						<td>4</td> <!-- Celda 3 -->
+						<td>Argentinos Juniors 9pts<br>Belgrano 3pts</td> <!-- Celda 4 -->
+					</tr>
+
+					<!-- Fila 3 -->
+					<tr>
+						<td>5</td> <!-- Celda 1 -->
+						<td>Defensa y Justicia 1pts<br>Union 4pts</td> <!-- Celda 2 -->
+						<td>6</td> <!-- Celda 3 -->
+						<td>Argentinos Juniors 9pts<br>Arcenal 2pts</td> <!-- Celda 4 -->
+					</tr>
+
+					<!-- Fila 4 -->
+					<tr>
+						<td>7</td> <!-- Celda 1 -->
+						<td>Independiente 1pts<br>San Lorenzo 4pts</td> <!-- Celda 2 -->
+						<td>8</td> <!-- Celda 3 -->
+						<td>Talleres 9pts<br>Vélez 1pts</td> <!-- Celda 4 -->
+					</tr>
+				</table>	
+			</section>
 		</main>
 
 		<!-- PIE DE PAGINA -->
 		<footer id="copyright">
-			<p>&copy; 2017-2019 DeporteXtremo - Derechos Reservados</p><!-- caracteres ascii html (https://ascii.cl/es/codigos-html.htm) -->			
+			<p>&copy; 2017-2019 DeporteXtremo - Derechos Reservados</p><!-- caracteres ascii html (https://ascii.cl/es/codigos-html.htm) -->
 		</footer>
 	</body>
 </html>
