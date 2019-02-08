@@ -37,6 +37,10 @@ a:hover {
 	border-bottom: solid 1px white/* tipo de borde - grosor - color */
 }
 
+#top button {
+	display: none;
+}
+
 #menu {
 	list-style: none;
 	padding: 0;
@@ -178,4 +182,43 @@ h1,h2,h3,h4,h5,h6 {
 
 #tablaPosiciones {
 	margin-bottom: 10px;
+}
+
+
+/* Ajustes Mobile */
+@media screen and (max-width: 480px) { /* Lo que esta dentro es como un css nuevo que pisa lo anterior */
+
+	#top {	/* Es el "modo porcesador de texto". Si llega al final de la ventana, la corta y manda el elemento abajo */
+		flex-wrap: wrap;
+	}
+
+	#menu {
+		display: none; /* Ni bien se abre la pagina en el celu no se tiene que ver */
+		margin: auto; /* Para que se centren las li. El auto siempre distribuye mitad y mitad. Es el promedio */
+		width: 100%; /* Para que los botones ocupen el 100% de la pantalla y sea m+as facil clickearlos */
+		position: absolute; /* Con position puedo congelar un header y tambien crear un eje Z para poder solapar imágenes. Se vuelve independiente */
+		left: 0;	/* left, right, bottom y top se activan cuando yo active position: absolute*/
+		top: 52px;	/* si use left, no puedo usar rigth. Si use top, no puedo usar bottom */
+		z-index: 1; /* Voy definiendo su orden en el eje Z */
+		background-color: #212121;
+
+	}
+
+	#top button {
+		display: block;
+		border: none;
+		background-color: transparent;
+		color: #CCCCCC;
+		font-size: 20px;
+		font-weight: 900;
+		margin-left: auto;
+	}
+
+	#top button:focus + #menu { /* Focus es como onclick. Con el + le digo a quien quiero que le aplique el estilo*/
+		display: block;		
+	}
+
+	#menu li {
+		float: none;
+	}
 }
