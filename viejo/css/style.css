@@ -1,223 +1,165 @@
 body {
 	font-family: Arial;
 	color: #333333;
-	margin: 0px;
-	font-size: 20px;
+	margin: 0;
+	font-size: 20px;	
 }
-
 h1 {
-	font-size: 22px;
-	margin: 0px;
-}
-
-/* Reglas para hipervínculos*/
-a {
-	text-decoration: none; /* Desactivo las reglas nativas del navegador */
-	color: #CCCCCC;
-}
-
-/* Creamos una pseudoclase para cuando el usuario interactua */
-a:hover {
-	color: #FFFFFF;
-}
-
-#top, 
-#content figcaption, 
-#copyright {
-	background-color: #212121;
-}
-
-
-#top {
-	padding: 10px;
-	display: flex; /* 3° forma de organizar el menu */
-	flex-direction: row; /* los organiza en forma de fila */
-	align-items: center; /* Eje X */
-	justify-content: flex-start; /* Eje Y */
-	border-bottom: solid 1px white/* tipo de borde - grosor - color */
-}
-
-#top button {
-	display: none;
-}
-
-#menu {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	color: white;
-
-	overflow: hidden;     /* - El navegador recupera la capacidad de saber cuanto mide de alto cada li y lo agrega al header 
-							- Se usa el hidden y no el auto porque no funciona bien en explorer */
-
-	margin: 0 0 0 auto;   /* Si quiero que un elemento no siga el flex, le defino el margin. Arriba derecha abajo izquierda */
-
-	text-align: center;	  /* Para que los botones queden bien centrados */
-}
-
-#menu li{
-	/* 1° forma de organizar el menu
-	display: block; elementos uno debajo de otro (soporta margin y padding)
-	display: inline; elementos uno al lado del otro (no soporta margin top ni bot)
-	display: inline-block; elementos uno al lado de otro (soporta margin y padding)
-	display: none; oculta el elemento completamente de la interfaz hasta que pasa algo (un desplegable) 
-	*/
-
-	/* 2° forma de organizar el menu */
-	float: left; /* - Para que cada elemento se pegue a la izquierda de su elemento superior (right los mezcla por algún motivo) 
-					- Cuando se aplica, el elemento contenedor pierde la capacidad de saber cuánto mide el elemento (sale del header)
-					- Se debe agregar la propiedad overflow al ul */
-
-
-	/* 3° forma de organizar el menu. ver #menu */
-
-
-	/* 
-	width: 100px; /* O el porcentaje del contenedor padre que quiero que ocupen los elementos 
-	*/
-}
-
-#menu li a {
-	display: block;	/* Amplio el margen interno para que sea más facil clickearlo */
-	padding: 10px; /* Necesitamos al menos 30 px para que el usuario pueda clickearlo con el dedo */
-	font-size:	24px; 
-	color: #D9D9D9;
-}
-
-#menu li a:hover {
-	color: #FFFFFF;
-	background-color: #AAAAAA;
-}
-
-#content figure {
+	font-size: 24px;
 	margin: 0;
 }
-
-#content figure figcaption {
-	padding: 10px;
-}
-
-#content figure figcaption h2 {
-	color: #FFFFFF;
-	margin: 0;
-	font-size: 36px;
-}
-
-#content img {
-	display: block; /* transformo la imagen en un elemento de bloque para que cubra toda el area */
-	width: 100%; /* siempre usan como escala al contenedor (en este caso el figure) */
-}
-
-.noticia {
-	border-bottom: solid 1px #CCC; /* Padding y marging engodarn el elemento. el border le come pixeles al elemento */
-	display: flex;
-	margin: 0 10px; /* si pongo 2 valores, estoy hablando del eje Y y el eje X (se repite arriba/abajo y der/izq) */
-	padding: 10px 0; /* Merging empuja del borde para afuera. El padding para adentro (comprime) */
-}
-
-.noticia-img, 
-.noticia-txt {
-	padding: 0 10px;
-	box-sizing: border-box; /* esto me permite que elpadding comprima y no engorde al elemento */
-}
-
 /*
-Con esto le saco la negrita a todos los h
 h1,h2,h3,h4,h5,h6 {
 	font-weight: normal;
 }
 */
+a {
+	text-decoration: none;
+	color: #CCCCCC;
+}
+a:hover {
+	color: #FFFFFF;
+}
 
+#top,
+#content figcaption,
+#copyright {
+	background-color: #212121;
+}
+
+#top {
+	display: flex;
+	flex-direction: row;
+	align-items: center; /* Eje X */
+	justify-content: flex-start; /* Eje Y */
+	padding: 10px;
+	border-bottom: solid 1px #FFFFFF;
+}
+#top button {
+	display: none;
+}
+#menu {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 auto;
+	color: white;
+	overflow: hidden;
+	text-align: center;
+}
+/*
+li {
+	display: inline; /* Elementos uno al lado de otro (no soporta margin top/bottom)
+	display: block; /* Elementos uno debajo de otro (soporta margin y padding completamente)
+	display: inline-block; /* Elementos uno al lado de otro y soporte para margin/padding completamente
+	display: none; /* Oculta el elemento completamente de la interfaz
+}
+*/
+#menu li {
+	float: left;
+}
+#menu li a {
+	display: block;
+	padding: 10px;
+	font-size: 24px;
+	color: #D9D9D9;
+}
+#menu li a:hover {
+	color: #FFFFFF;
+	background-color: #AAAAAA;
+}
+#content figure {
+	margin: 0;
+}
+#content figure figcaption {
+	padding: 10px;
+}
+#content figure figcaption h2 {
+	color: #FFF;
+	margin: 0;
+	font-size: 36px;
+}
+#content img {
+	display: block;
+	width: 100%;
+}
+.noticia {
+	border-bottom: solid 1px #CCCCCC;
+	display: flex;
+	margin: 0 10px;
+	padding: 10px 0;
+}
+.noticia-img, .noticia-txt {
+	padding: 0 10px;
+	box-sizing: border-box;
+}
 .noticia-img {
 	width: 30%;
 }
-
 .noticia-txt {
 	width: 70%;
 }
-
-#ultimasNoticias .noticia:last-child { /* aplica el estilo al ultimo elemento de la sección. Lo uso para sacarle el broder */
+#ultimasNoticias .noticia:last-child {
 	border: none;
 }
-
-#copyright {
-	margin: none;
+#copyright p {
+	margin: 0;
 	padding: 10px;
 	color: #FFF;
 	text-align: center;
 }
-
 #tablaPosiciones table {
-	border-collapse: collapse;  /* anula el cellpadding y el cellspacing del navegador */
-	border: solid 1px #000000;
+	border-collapse: collapse;
+	border: none;
 	margin: auto;
 	width: 800px;
 }
-
 #tablaPosiciones table tr {
 	border: solid 1px #000000;
-
 }
-
 #tablaPosiciones table th {
 	background-color: red;
 	color: #FFF;
-}
-
-#tablaPosiciones table td {
-	background-color: #CCC;
 	padding: 10px;
 }
-
-#tablaPosiciones table td:nth-of-type(odd) { /* para impares */
+#tablaPosiciones table td {
+	background-color: #CCCCCC;
+	padding: 10px;
+}
+#tablaPosiciones table td:nth-of-type(odd){ /* ◄ Impares */
 	text-align: center;
 	font-weight: bold;
 	font-size: 28px;
-
 }
-
-#tablaPosiciones table td:nth-of-type(even) span { /* para pares */
+#tablaPosiciones table td:nth-of-type(even) span { /* ◄ Pares */
 	color: green;
 }
-
-#tablaPosiciones {
-	margin-bottom: 10px;
-}
-
-
 /* Ajustes Mobile */
-@media screen and (max-width: 480px) { /* Lo que esta dentro es como un css nuevo que pisa lo anterior */
-
-	#top {	/* Es el "modo porcesador de texto". Si llega al final de la ventana, la corta y manda el elemento abajo */
+@media screen and (max-width: 480px) {
+	#top {
 		flex-wrap: wrap;
 	}
-
 	#menu {
-		display: none; /* Ni bien se abre la pagina en el celu no se tiene que ver */
-		margin: auto; /* Para que se centren las li. El auto siempre distribuye mitad y mitad. Es el promedio */
-		width: 100%; /* Para que los botones ocupen el 100% de la pantalla y sea m+as facil clickearlos */
-		position: absolute; /* Con position puedo congelar un header y tambien crear un eje Z para poder solapar imágenes. Se vuelve independiente */
-		left: 0;	/* left, right, bottom y top se activan cuando yo active position: absolute*/
-		top: 52px;	/* si use left, no puedo usar rigth. Si use top, no puedo usar bottom */
-		z-index: 1; /* Voy definiendo su orden en el eje Z */
+		display: none;
+		margin: auto;
+		width: 100%;
 		background-color: #212121;
-
+		position: absolute;
+		left: 0;
+		top: 52px;
+		z-index: 9999;
 	}
-
 	#top button {
 		display: block;
 		border: none;
 		background-color: transparent;
 		color: #CCCCCC;
-		font-size: 20px;
-		font-weight: 900;
+		font-size: 24px;
+		font-weight: 600;
 		margin-left: auto;
 	}
-
-	#top button:focus + #menu { /* Focus es como onclick. Con el + le digo a quien quiero que le aplique el estilo*/
-		display: block;		
+	#top button:focus + #menu {
+		display: block;
 	}
-
 	#menu li {
 		float: none;
 	}

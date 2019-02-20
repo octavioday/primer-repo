@@ -1,5 +1,9 @@
-function saludar(){
-	window.alert("Hola desde JS")
+/*
+ - Mini Introduccion a JavaScript:
+   Funciones y Eventos
+*/
+function saludar(){ //<--- Operacion logica
+	window.alert("Hola desde JavaScript")
 }
 
-document.querySelector("h1").onclick = saludar; // Es un evento, un comportamiento del usuario //
+document.querySelector("h1").onclick = saludar; //<-- Evento/Comportamiento...
