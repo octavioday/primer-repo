@@ -1,0 +1,6 @@
+var nota = [
+	/* 0 => */ ["La tecnología llega a la actual edición de la Libertadores","por Joaquín Angeli","La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.","sorteo-libertadores.jpg"],
+	/* 1 => */ ["La tecnología llega a la actual edición de la Libertadores","por Joaquín Angeli","La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.","juegos-olimpicos.jpg"],
+	/* 2 => */ ["La tecnología llega a la actual edición de la Libertadores","por Joaquín Angeli","La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.","juegos-olimpicos.jpg"],
+	/* 3 => */ ["La tecnología llega a la actual edición de la Libertadores","por Joaquín Angeli","La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.","juegos-olimpicos.jpg"]
+];

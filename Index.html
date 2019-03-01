@@ -87,15 +87,15 @@
     <!-- SLIDER -->
 
     <main class="container-fluid">
-    	<section>
-            <article class="row">
+    	<section id="ultimas-noticias">
+            <article class="row noticia d-none"> <!-- el d-none es display none, para que no lo carge en primera instancia, sino cuando lo clone -->
                 <div class="noticia-img col-12 col-sm-6 col-lg-4">
-                    <img src="img/sorteo-libertadores.jpg" class="img-fluid"> <!-- img-fluid es para que la imagen se adapte sola -->
+                    <img src="img/" class="img-fluid"> <!-- img-fluid es para que la imagen se adapte sola -->
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <h1>agdsjahfjkfj  sadsdf sdfsfd</h1>
-                    <h2>agdsjahfjkfj  sadsdf sdfsfd</h2>
-                    <h3 class="h5 font-weight-bold">agdsjahfjkfj  sadsdf sdfsfd</h3>
+                    <h3>{{TITULO}}</h3>
+                    <p class="small">por <a href="#">{{AUTOR}}</a></p>
+                    <p>{{DETALLE}}</p>
                 </div>
             </article>   
         </section>     
@@ -106,6 +106,21 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/noticias.js"></script>
+    <script>
+        for(var i = 0; i < nota.length ;i++ ){
+            var noticia = document.querySelector(".noticia").cloneNode(true); /* el true es para que me clone tmb a todos sus childs */
+
+            noticia.querySelector("h3").innerText = nota[i][0];
+            noticia.querySelector(".small a").innerText = nota[i][1];
+            noticia.querySelector("p:last-child").innerText = nota[i][2];
+            noticia.querySelector("img").src = "img/" + nota[i][3];
+
+            noticia.classList.remove("d-none"); /* le saca el d-none al article para volverlo visible (lo habia escondico en la primera cargada) */
+
+            document.querySelector("#ultimas-noticias").appendChild(noticia); /* para insertar el nodo que clone arriba */            
+        }
+    </script>
 </body>
 
 </html>
