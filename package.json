@@ -1,0 +1,23 @@
+{
+  "name": "servidor-node-dx",
+  "version": "2.0.0",
+  "description": "Servidor web para alojar el proyecto DeporteXtremo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octavioday/primer-repo.git"
+  },
+  "author": "DayOx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/octavioday/primer-repo/issues"
+  },
+  "homepage": "https://github.com/octavioday/primer-repo#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0"
+  }
+}
