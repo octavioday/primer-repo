@@ -1,0 +1,4 @@
+Son las carpetas que quiero que ignore Github al subir. Tengo que crear este archivo desde Zublime, sino windows no me va a dejar
+
+node_modules/
+BASE/
