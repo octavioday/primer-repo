@@ -90,7 +90,7 @@
     <main class="container-fluid">
 
       <!-- Inicio Noticia #1 -->
-      <article class="row py-3 mx-3 border-bottom">
+      <article class="row py-3 mx-3 border-bottom d-none noticia"> <!-- d-none es el ocultar de bootstrap / agregamos el noticia para capurarlo con el script-->
         <div class="col-12 col-md-4">
           <img src="{{IMAGEN}}}" class="img-fluid">
         </div>
@@ -151,20 +151,54 @@
     window.onload = obtenerNoticias
 
 		function obtenerNoticias(){
+      //debugger // ESTO ES MAGIA
 
 			let ajax = new XMLHttpRequest()
-			ajax.open("GET","noticias.json")
+			ajax.open("GET","https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.clarin.com%2Frss%2Fdeportes%2Fboxeo%2F") //antes invocaba el noticias.json local
 			ajax.onload = function(){
 				if( ajax.status == 200 ){ // status es el código con el que respondió el servidor. 200 es respuesta exitosa
 
+          /*
           console.log("ANTES DEL PARSEO")
 					console.log( ajax.response ) // response es la propiedad con la que guarda los datos.
-
+          
           console.log("DESPUES DEL PARSEO")
           console.log( JSON.parse(ajax.response) ) // response es la propiedad con la que guarda los datos.
+          */
+
+          let noticias = JSON.parse(ajax.response)
+
+          // console.table(noticias)
+
+          noticias.items.forEach(function(noticia) { //antes era solo noticia, ahora le tengo que agregar el .items
+
+            /*
+            console.log(`El tíulo es: ${noticia.titulo}`)
+            console.log(`El autor es: ${noticia.autor}`)
+            */
+
+            let article = document.querySelector(".noticia").cloneNode(true) // con el true me clona al elemento y a todos los hijos
+
+            article.querySelector("h3").innerText = noticia.title // antes era titulo
+            article.querySelector("strong").innerText = noticia.author // antes era autor
+            article.querySelector("p:nth-of-type(2)").innerText = noticia.description // antes era detalle
+            article.querySelector("img").src = noticia.enclosure.link // antes era imagen
+            
+            article.classList.remove ("d-none")
+
+            console.log(article)
+
+            document.querySelector("main").appendChild(article)
+
+          })
 
 				}
 			}
+
+      /* Para conectarme a una API de noticias tengo que buscar el RSS de la nación por ejemplo, copiar el enlace y convertirlo a JSON en https://rss2json.com/. Despues agarro ese link que me generí t lo remplazo en el GET de AJAX. 
+
+      Use la de clarin y me genero https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.clarin.com%2Frss%2Fdeportes%2Fboxeo%2F. Tuve que reemplazar el noticia del forEach por noticia.items. Por ultimo reemplace cada pripiedad que queria que tome por la correcta del JSON
+
       // En el navegador, en Network, los archivos XHR son los XMLHttpRequest
 			/* (evento) cuando se carga el json. Como es el unico evento que va a utilizar esta funcionalidad, no es necasario crear una función aparte (función anónima). */
 			ajax.send()
