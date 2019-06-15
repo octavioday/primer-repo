@@ -44,6 +44,10 @@ taskkill -PID elPIDindicado -F
 const http = require("http");
 const fs = require("fs");
 
+// const port = PUERTO_DE_HEROKU || PUERTO_MIO
+
+const port = porcess.env.port || 80 // el process.env.port busco el puerto que le asignó el entorno en donde está corriendo. Si no existe, agarra el 80
+
 http.createServer((request, response) => {
 		
 		let dir = "public/";
@@ -86,6 +90,6 @@ http.createServer((request, response) => {
 
 		});
 
-}).listen(80);
+}).listen(port); // cuando lo uso en mi máquina puedo usar el puerto 80 que es el general. Para usar en Heroku necesito saber que puerto me asignó
 
 

@@ -4,6 +4,7 @@
   "description": "Servidor web para alojar el proyecto DeporteXtremo",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
