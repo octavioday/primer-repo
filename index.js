@@ -46,7 +46,7 @@ const fs = require("fs");
 
 // const port = PUERTO_DE_HEROKU || PUERTO_MIO
 
-const port = porcess.env.port || 80 // el process.env.port busco el puerto que le asignó el entorno en donde está corriendo. Si no existe, agarra el 80
+const port = process.env.PORT || 80 // el process.env.port busco el puerto que le asignó el entorno en donde está corriendo. Si no existe, agarra el 80
 
 http.createServer((request, response) => {
 		
